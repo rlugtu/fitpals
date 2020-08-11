@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const DB_NAME = process.env.DB_NAME || 'fitpals'
 const options = {
     query: e => {
         if (process.env.NODE_ENV === 'dev') {
@@ -10,8 +10,10 @@ const options = {
 
 const pgp = require('pg-promise')(options);
 
+
+
 module.exports = pgp({
-    database: 'fitpals',
+    database: DB_NAME,
     port: 5432,
     host: 'localhost',
 });
