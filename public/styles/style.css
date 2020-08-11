@@ -1,16 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:rgb(240,240,240);
+}
+
+
 /* NAV BAR */
 
 nav {
     padding: 20px;
-    background-color: rgba(46, 49, 49, 1);
+    background-color:rgba(103, 128, 159, 1);
     display: flex;
-    justify-content: center;
-    justify-content: flex-end;
-
+    justify-content: space-around;
+}
+.logo {
+    font-size: 30px;
+    color: rgba(234, 234, 234, 1);
 }
 nav ul {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 nav li {
     font-size: 20px;
@@ -22,5 +31,5 @@ li {
 }
 a {
     text-decoration: none;
-    color: white;
+    color: rgba(234, 234, 234, 1);
 }
