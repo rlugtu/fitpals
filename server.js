@@ -1,11 +1,19 @@
 const express = require('express')
 const logger = require('morgan')
+const bodyParser = require('body-parser')
 
 const scheduleRouter = require('./routes/schedule-router')
 
 const app = express()
 
 app.use(logger('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.set('views', 'views');
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

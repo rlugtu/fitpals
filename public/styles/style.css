@@ -1,0 +1,26 @@
+/* NAV BAR */
+
+nav {
+    padding: 20px;
+    background-color: rgba(46, 49, 49, 1);
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav li {
+    font-size: 20px;
+    margin: 0px 20px;
+}
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

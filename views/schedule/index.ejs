@@ -1,0 +1,17 @@
+<%- include('../partials/boilerplate') %>
+
+
+
+
+<% workouts.forEach(workout => {  %>
+<h3><%= workout.date %></h3>
+<h3><%= workout.split %></h3>
+<h3><%= workout.exercises %></h3>
+<h3><%= workout.notes %></h3>
+<% }) %>
+
+
+
+
+
+<%- include('../partials/end') %>
