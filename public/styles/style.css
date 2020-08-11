@@ -83,6 +83,9 @@ input {
     padding: 10px;
     margin: 1em;
 }
+.fullSchedule a {
+    color: black;
+}
 .date {
     padding: 5px;
     border-bottom: 1px solid black;
@@ -99,4 +102,19 @@ input {
 .status {
     padding: 5px;
     font-size: 1em;
+}
+
+/* SINGLE WORKOUT PAGE */
+
+.singleWorkout {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10%;
+    margin-top: 50px;
+}
+
+.button {
+display: inline;
 }

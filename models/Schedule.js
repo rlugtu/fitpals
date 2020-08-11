@@ -16,6 +16,15 @@ class Schedule {
         })
     }
 
+    static getById(id) {
+        return db
+            .oneOrNone('SELECT * FROM workouts WHERE id =$1', id)
+            .then((workout) => {
+                if (workout) return new this(workout)
+                else throw new Error('No Workout Found')
+            })
+    }
+
     save() {
         return db.one(`INSERT INTO workouts
         (split, exercises, status, notes, date)

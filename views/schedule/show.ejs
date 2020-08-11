@@ -1,0 +1,38 @@
+<%- include('../partials/boilerplate') %>
+
+<div class="singleWorkout">
+    <div class="date">
+        <h3>Date: <%= workout.date%></h3>
+    </div>
+    <div class="split">
+        <h3>Exercises: <%= workout.split%></h3>
+    </div>
+    <div class="workoutContent">
+        <h3>Exercises: <%= workout.exercises%></h3>
+        <h3>Exercises: <%= workout.notes%></h3>
+    </div>
+    <div class="status">
+        <h3><% if (workout.status) { %>
+            Completed
+            <% } else { %>
+            Incomplete
+            <% } %>
+        </h3>
+    </div>
+    <div class=options>
+        <form class="button" method="POST" action="/schedule/<%= workout.id%>?_method=DELETE">
+            <input type="submit" value="Delete this workout">
+        </form>
+        <form class="button" method="POST" action="/schedule/<%= workout.id%>?_method=PUT">
+            <input type="submit" value="Edit">
+        </form>
+        <form class="button" method="GET" action="/schedule/">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+
+    <a href="/todos" class="buttonlike">Back to the list!</a>
+</div>
+
+
+<%- include('../partials/end') %>
