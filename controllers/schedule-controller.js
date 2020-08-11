@@ -21,7 +21,7 @@ const scheduleController = {
         })
             .save()
             .then((workout) => {
-                res.json({ workout })
+                res.redirect('schedule/');
             })
             .catch(next)
     }

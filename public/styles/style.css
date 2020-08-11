@@ -22,7 +22,7 @@ nav ul {
     align-items: center;
 }
 nav li {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0px 20px;
 }
 li {
@@ -32,4 +32,61 @@ li {
 a {
     text-decoration: none;
     color: rgba(234, 234, 234, 1);
+}
+
+
+
+/* SCHEDULE INDEX */
+.scheduleContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    margin-top: 5%;
+}
+
+.addWorkout {
+    padding: 10px;
+    border: 2px solid black;
+    width: 100%;
+    margin: 1em;
+    height: 275px;
+    
+}
+.addWorkout h1 {
+    font-size: 1.5em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    margin: 5px 0;
+    height: 30px;
+    font-size: 18px;
+}
+
+.fullSchedule {
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    padding: 10px;
+    margin: 1em;
+}
+.date {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    font-size: 1.5em;
+}
+.split {
+    padding: 5px;
+    font-size: 1.2em;
+}
+.workoutContent {
+    padding: 5px;
+    font-size: 1em;
+}
+.status {
+    padding: 5px;
+    font-size: 1em;
 }
