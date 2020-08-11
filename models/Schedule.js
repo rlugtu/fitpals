@@ -32,6 +32,23 @@ class Schedule {
         ($/split/, $/exercises/, $/status/, $/notes/, $/date/)
         RETURNING *`, this).then(workout => Object.assign(this, workout))
     }
+    update(changes) {
+        Object.assign(this, changes)
+        return db
+            .one(
+                `UPDATE workouts SET
+            split = $/split/,
+            exercises = $/exercises/,
+            status = $/status/,
+            notes = $/notes/,
+            date = $/date/
+            WHERE id = $/id/
+            RETURNING *
+            `,
+                this
+            )
+            .then((updatedWorkout) => Object.assign(this, updatedWorkout))
+    }
 }
 
 module.exports = Schedule

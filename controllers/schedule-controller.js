@@ -32,6 +32,22 @@ const scheduleController = {
                 next()
             })
             .catch(next)
+    },
+    update(req, res, next) {
+        Schedule.getById(req.params.id)
+            .then((workout) => {
+                return workout.update({
+                    split: req.body.split,
+                    exercises: req.body.exercises,
+                    notes: req.body.notes,
+                    date: req.body.date,
+                    status: req.body.status,
+                })
+            })
+            .then((updatedWorkout) => {
+                res.redirect(`/schedule/${updatedWorkout.id}`)
+            })
+            .catch(next)
     }
 }
 

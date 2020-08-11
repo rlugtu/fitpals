@@ -1,0 +1,22 @@
+<%- include('../partials/boilerplate') %>
+
+<div class="singleWorkout">
+    <div class="date">
+        <form method='POST' action='/schedule/<%= workout.id %>?_method=PUT'>
+            <input name='date' type='text' value='<%= workout.date %>' />
+            <input name='split' type='text' value='<%= workout.split %>' />
+            <input name='exercises' type='text' value='<%= workout.exercises %>'>
+            <input name='notes' type='text' value='<%= workout.notes %>'>
+            <input name='status' type='text' value='<%= workout.status %>'>
+            <input type='submit' value='Update' />
+        </form>
+    </div>
+    <div class=options>
+        <form class="button" method="GET" action="/schedule/">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+</div>
+
+
+<%- include('../partials/end') %>
