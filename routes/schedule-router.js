@@ -21,4 +21,6 @@ scheduleRouter.get('/:id/edit', scheduleController.show, (req, res) => {
 })
 scheduleRouter.put('/:id([0-9]+)', scheduleController.update)
 
+scheduleRouter.delete('/:id([0-9]+)', scheduleController.delete)
+
 module.exports = scheduleRouter;

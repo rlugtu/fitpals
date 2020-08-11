@@ -8,27 +8,29 @@
             <input name='split' type='text' placeholder='Split' />
             <input name='exercises' type='text' placeholder='Exercises'>
             <input name='notes' type='text' placeholder='Notes'>
-            <input type='submit' value='Submit!' />
+            <input type='submit' value='Submit' />
         </form>
     </div>
 
     <div class="fullSchedule">
         <% workouts.forEach(workout => {  %>
-        <div class="date">
-            <h3><a href='/schedule/<%=workout.id %>'><%= workout.date %></a></h3>
-        </div>
-        <div class="split">
-            <h3><%= workout.split %></h3>
-        </div>
-        <div class="workoutContent">
-            <h3><%= workout.exercises %></h3>
-            <h3><%= workout.notes %></h3>
-        </div>
-        <div class="status"><% if (workout.status) { %>
-            Completed
-            <% } else { %>
-            Incomplete
-            <% } %>
+        <div class="singleWorkouts">
+            <div class="date">
+                <h3><a href='/schedule/<%=workout.id %>'><%= workout.date %></h3>
+            </div>
+            <div class="split">
+                <h3><%= workout.split %></h3>
+            </div>
+            <!-- <div class="workoutContent">
+                <h3><%= workout.exercises %></h3>
+                <h3><%= workout.notes %></h3>
+            </div> -->
+            <div class="status"><% if (workout.status) { %>
+                Completed
+                <% } else { %>
+                Incomplete
+                <% } %>
+            </div>
         </div>
         <% }) %>
     </div>

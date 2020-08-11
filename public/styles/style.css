@@ -54,6 +54,10 @@ a {
     margin-top: 5%;
 }
 
+.singleWorkouts {
+    border: 2px solid black;
+    margin: 5px;
+}
 .addWorkout {
     padding: 10px;
     border: 2px solid black;
@@ -78,10 +82,10 @@ input {
 .fullSchedule {
     width: 100%;
     display: flex;
-    border: 2px solid black;
+    /* border: 2px solid grey; */
     flex-direction: column;
-    padding: 10px;
     margin: 1em;
+    
 }
 .fullSchedule a {
     color: black;
@@ -90,6 +94,8 @@ input {
     padding: 5px;
     border-bottom: 1px solid black;
     font-size: 1.5em;
+    background-color:rgba(103, 128, 159, 1);
+    
 }
 .split {
     padding: 5px;
@@ -117,4 +123,10 @@ input {
 
 .button {
 display: inline;
+}
+
+/* EDIT FORM */
+
+.editForm h1{
+font-size: 20px;
 }

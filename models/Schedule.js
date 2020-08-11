@@ -49,6 +49,10 @@ class Schedule {
             )
             .then((updatedWorkout) => Object.assign(this, updatedWorkout))
     }
+
+    delete() {
+        return db.none('DELETE FROM workouts WHERE id = $1', this.id)
+    }
 }
 
 module.exports = Schedule

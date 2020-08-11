@@ -48,6 +48,16 @@ const scheduleController = {
                 res.redirect(`/schedule/${updatedWorkout.id}`)
             })
             .catch(next)
+    },
+    delete(req, res, next) {
+        Schedule.getById(req.params.id)
+            .then((workout) => {
+                return workout.delete()
+            })
+            .then(() => {
+                res.redirect('/schedule')
+            })
+            .catch(next)
     }
 }
 
