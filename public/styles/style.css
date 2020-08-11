@@ -3,14 +3,24 @@ body {
     background-color:rgb(240,240,240);
 }
 
+/* login */
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.login input {
+    margin: 5px;
+}
 
 /* NAV BAR */
 
 nav {
-    padding: 20px;
+    padding: 10px;
     background-color:rgba(103, 128, 159, 1);
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .logo {
     font-size: 30px;

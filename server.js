@@ -1,7 +1,6 @@
 const express = require('express')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
-
 const scheduleRouter = require('./routes/schedule-router')
 
 const app = express()
@@ -21,7 +20,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.render('login')
 })
 
 app.use('/schedule', scheduleRouter)
