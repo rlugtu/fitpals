@@ -25,6 +25,9 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
     res.render('login')
 })
+app.get('/user', (req, res) => {
+    res.render('user')
+})
 
 app.use('/schedule', scheduleRouter)
 
