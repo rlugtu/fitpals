@@ -1,8 +1,24 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color:rgb(240,240,240);
+    background-image: url('https://images.unsplash.com/photo-1484452330304-377cdeb05340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: auto;
 }
 
+footer {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: black;
+    background-color:rgba(234, 234, 234, .5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 /* login */
 .login {
     display: flex;
@@ -15,12 +31,17 @@ body {
 
 /* NAV BAR */
 
+.scheduleContent {
+    background-color: rgba(234, 234, 234, .2);
+    border-radius: 10px;
+}
 nav {
-    padding: 10px;
-    background-color:rgba(103, 128, 159, 1);
+    padding: 20px;
+    background-color:rgba(103, 128, 159, .5);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 .logo {
     font-size: 30px;
@@ -56,18 +77,22 @@ a {
 
 .singleWorkouts {
     border: 2px solid black;
+    border-radius: 10px;
     margin: 5px;
+    background-color:rgba(234, 234, 234, .5)
 }
 .addWorkout {
+    background-color:rgba(234, 234, 234, .2);
     padding: 10px;
     border: 2px solid black;
+    border-radius: 10px;
     width: 100%;
     margin: 1em;
     height: 275px;
-    
 }
 .addWorkout h1 {
     font-size: 1.5em;
+    color:  white;
 }
 form {
     display: flex;
@@ -82,10 +107,16 @@ input {
 .fullSchedule {
     width: 100%;
     display: flex;
-    /* border: 2px solid grey; */
+    border: 2px solid black;
+    border-radius: 10px;
     flex-direction: column;
+    padding: 10px;
     margin: 1em;
     
+}
+.fullSchedule h1{
+    font-size: 1.5em;
+    color:  rgba(234, 234, 234, 1);
 }
 .fullSchedule a {
     color: black;
@@ -95,10 +126,13 @@ input {
     border-bottom: 1px solid black;
     font-size: 1.5em;
     background-color:rgba(103, 128, 159, 1);
+    border-radius: 10px;
+    
     
 }
 .split {
     padding: 5px;
+    background-color:rgba(234, 234, 234, .5);
     font-size: 1.2em;
 }
 .workoutContent {
@@ -117,6 +151,7 @@ input {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
+    border-radius: 10px;
     margin: 10%;
     margin-top: 50px;
 }
@@ -130,3 +165,7 @@ display: inline;
 .editForm h1{
 font-size: 20px;
 }
+
+
+
+
