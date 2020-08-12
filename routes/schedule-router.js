@@ -1,11 +1,11 @@
 const express = require('express')
 const scheduleRouter = express.Router()
 const scheduleController = require('../controllers/schedule-controller')
-
+const authHelpers = require('../services/auth/auth-helpers')
 // SHOW ALL WORKOUTS
 scheduleRouter.get('/', scheduleController.index)
 // GET SINGLE WORKOUT 
-scheduleRouter.get('/:id([0-9]+)', scheduleController.show, (req, res) => {
+scheduleRouter.get('/:id([0-9]+)', authHelpers.loginRedirect, scheduleController.show, (req, res) => {
     res.render('schedule/show', {
         schedule: res.locals.workout
     })

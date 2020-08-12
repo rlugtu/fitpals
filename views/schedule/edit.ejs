@@ -1,6 +1,6 @@
 <%- include('../partials/boilerplate') %>
 
-<div class="singleWorkout">
+<div class="singleWorkouts">
     <div class="editForm">
         <form method='POST' action='/schedule/<%= workout.id %>?_method=PUT'>
             <h1>Date</h1>
@@ -17,7 +17,7 @@
         </form>
     </div>
     <div class=options>
-        <form class="button" method="GET" action="/schedule/<%= workout.id %>">
+        <form class="button" method="GET" action="/schedule/">
             <input type="submit" value="Back">
         </form>
     </div>

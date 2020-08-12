@@ -6,16 +6,11 @@ const usersController = {
         req.user
             .findUserSchedule()
             .then((workouts) => {
-                res.json({
-                    data: {
-                        user: req.user,
-                        workouts
-                    },
-                })
+                res.render('user', {
+                    workouts,
+                });
             })
-        res.render('user', {
-            user: req.user,
-        })
+            .catch(next)
     },
 
     create(req, res, next) {
