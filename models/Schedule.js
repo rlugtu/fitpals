@@ -11,7 +11,7 @@ class Schedule {
     }
 
     static getAll() {
-        return db.manyOrNone('SELECT * FROM workouts ORDER BY date DESC;').then(workouts => {
+        return db.manyOrNone('SELECT * FROM workouts ORDER BY date ASC;').then(workouts => {
             return workouts.map(workout => new this(workout))
         })
     }

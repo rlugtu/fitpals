@@ -1,9 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color:rgb(240,240,240);
-    background-image: url('https://images.unsplash.com/photo-1484452330304-377cdeb05340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80');
+    background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1694&q=80');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -14,7 +15,6 @@ footer {
     padding: 20px;
     color: black;
     background-color:rgba(234, 234, 234, .3);
-    position: absolute;
     width: 100%;
     bottom: 0;
 }
@@ -28,6 +28,44 @@ footer {
     margin: 5px;
 }
 
+/*  REGISTER PAGE */
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240,240,240);
+    border-radius: 20px;
+    margin: 0 30%;
+    padding: 30px;
+    margin-top: 10%;
+}
+.loginField {
+    width: 100%;
+}
+.loginField > input {
+    border-radius: 5px;
+    border: 2px solid  rgba(103, 128, 159, 1);
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100px;
+    color: white;
+    background-color: rgba(103, 128, 159, 1);
+    height: 40px;
+    border: 2px solid white;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+.buttonDiv {
+    display: flex;
+    justify-content: center
+}
+
+
 /* NAV BAR */
 
 .scheduleContent {
@@ -35,8 +73,8 @@ footer {
     border-radius: 10px;
 }
 nav {
-    padding: 20px;
-    background-color:rgba(103, 128, 159, .5);
+    padding: 35px;
+    /* background-color:rgba(103, 128, 159, .1); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,7 +116,7 @@ a {
     border: 2px solid black;
     border-radius: 10px;
     margin: 5px;
-    background-color:rgba(234, 234, 234, .5)
+    background-color:rgba(234, 234, 234, .6)
 }
 .addWorkout {
     background-color:rgba(234, 234, 234, .2);
@@ -168,24 +206,21 @@ font-size: 20px;
 
 /* USER PAGE */
 .userPage {
-    margin-top: 3rem;
-    margin-left: 5rem;
     display: flex;
-    justify-content: space-evenly;
-    margin: 3em 5%;
+    width: 100%;
+    margin-top: 5%;
+    justify-content: space-evenly
 }
 
 .userContent {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* margin: 3em 10em; */
     height: 100%;
 }
 .userContent h1{
     color: rgb(240,240,240);
     font-size: 4em;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .picCrop {
     margin-top: 2em;
@@ -206,7 +241,7 @@ font-size: 20px;
     margin-top: 2rem;
     padding: 0 10px;
     width: 35vh;
-    background-color: rgba(240,240,240, .5);
+    background-color: rgba(240,240,240, .6);
     border-radius: 10px;
 }
 p {
@@ -222,28 +257,25 @@ li {
 }
 .scheduleSummary {
     display: flex;
-    flex-direction: column;
     height: 70vh;
-    justify-content: space-evenly;
 }
 .scheduleSummary h1 {
    font-size: 30px;
    color: white;
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    
 }
 .plannedWorkoutList {
-    background-color: rgba(240,240,240, .5);
+    background-color: rgba(240,240,240, .6);
     border-radius: 10px;
     padding: 5px;
+    margin: 10px;
 }
 
 .pastWorkoutsList {
-    background-color: rgba(240,240,240, .5);
+    background-color: rgba(240,240,240, .6);
     border-radius: 10px;
     padding: 5px;
-    min-width: 670px;
-    width: auto;
+    margin: 10px;
 }
 
 
