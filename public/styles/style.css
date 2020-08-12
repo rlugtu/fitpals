@@ -5,19 +5,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-attachment: fixed;
 }
 
-footer {
-    display: flex; 
+main {
+    margin: 0 5%;
+    flex-grow: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    color: black;
-    background-color:rgba(234, 234, 234, .3);
-    width: 100%;
-    bottom: 0;
 }
+
 /* login */
 .login {
     display: flex;
@@ -42,19 +40,22 @@ footer {
 .loginField {
     width: 100%;
 }
+input {
+    border-radius: 5px;
+    border: none;
+}
 .loginField > input {
     border-radius: 5px;
     border: 2px solid  rgba(103, 128, 159, 1);
 }
 
 input[type="submit"] {
-    margin-top: 20px;
     border-radius: 10px;
     width: 100px;
     color: white;
     background-color: rgba(103, 128, 159, 1);
     height: 40px;
-    border: 2px solid white;
+    border: none;
 }
 
 input[type="submit"]:hover {
@@ -67,21 +68,23 @@ input[type="submit"]:hover {
 
 
 /* NAV BAR */
+.loginNav {
+    display: flex;
+    flex-direction: column
+}
 
 .scheduleContent {
     background-color: rgba(234, 234, 234, .2);
     border-radius: 10px;
 }
 nav {
-    padding: 35px;
-    /* background-color:rgba(103, 128, 159, .1); */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    min-height: 8vh;
 }
 .logo {
-    font-size: 30px;
+    font-size: 40px;
     color: rgba(234, 234, 234, 1);
 }
 nav ul {
@@ -90,7 +93,7 @@ nav ul {
     align-items: center;
 }
 nav li {
-    font-size: 22px;
+    font-size: 26px;
     margin: 0px 20px;
 }
 li {
@@ -217,15 +220,16 @@ font-size: 20px;
     align-items: center;
     flex-direction: column;
     height: 100%;
+    padding:0 30px;
 }
 .userContent h1{
     color: rgb(240,240,240);
-    font-size: 4em;
+    font-size: 2.5em;
 }
 .picCrop {
     margin-top: 2em;
-    width: 350px;
-    height: 350px;
+    width: 30vh;
+    height: 30vh;
     border-radius: 50%;
     overflow: hidden;
     
@@ -244,15 +248,13 @@ font-size: 20px;
     background-color: rgba(240,240,240, .6);
     border-radius: 10px;
 }
-p {
-   font-size: 1.5em;
-}
+
 ul {
     margin: 0;
 }
 
 li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: .5em;
 }
 .scheduleSummary {
@@ -264,7 +266,13 @@ li {
    color: white;
    
 }
+.upcomingWorkouts, .pastWorkouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .plannedWorkoutList {
+    display: flex;
     background-color: rgba(240,240,240, .6);
     border-radius: 10px;
     padding: 5px;
@@ -280,3 +288,19 @@ li {
 
 
 
+
+
+
+/*  FOOTER */
+footer {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    box-sizing: border-box;
+    color: black;
+    background-color:rgba(234, 234, 234, .2);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
