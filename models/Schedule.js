@@ -1,13 +1,14 @@
 const db = require('../db/config')
 
 class Schedule {
-    constructor(workout) {
-        this.id = workout.id || null
-        this.split = workout.split
-        this.exercises = workout.exercises
-        this.status = workout.status || false
-        this.notes = workout.notes
-        this.date = workout.date
+    constructor({ id, split, exercises, status, notes, date, user_id }) {
+        this.id = id || null
+        this.split = split
+        this.exercises = exercises
+        this.status = status || false
+        this.notes = notes
+        this.date = date
+        this.user_id = user_id
     }
 
     static getAll() {
@@ -27,9 +28,9 @@ class Schedule {
 
     save() {
         return db.one(`INSERT INTO workouts
-        (split, exercises, status, notes, date)
+        (split, exercises, status, notes, date, user_id)
         VALUES
-        ($/split/, $/exercises/, $/status/, $/notes/, $/date/)
+        ($/split/, $/exercises/, $/status/, $/notes/, $/date/, $/user_id/)
         RETURNING *`, this).then(workout => Object.assign(this, workout))
     }
     update(changes) {

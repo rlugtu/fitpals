@@ -81,7 +81,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 6vh;
+    padding: 10px;
 }
 .logo {
     font-size: 40px;
@@ -93,7 +94,7 @@ nav ul {
     align-items: center;
 }
 nav li {
-    font-size: 26px;
+    font-size: 24px;
     margin: 0px 20px;
 }
 li {
@@ -277,6 +278,11 @@ li {
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
+}
+
+.pastWorkouts h1{
+    font-size: 30px;
+    color: white;
 }
 
 .pastWorkoutsList {

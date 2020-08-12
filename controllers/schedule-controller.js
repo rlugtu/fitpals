@@ -10,6 +10,15 @@ const scheduleController = {
             })
             .catch(next)
     },
+    indexUser(req, res, next) {
+        Schedule.getAll()
+            .then((workouts) => {
+                res.render('user', {
+                    workouts,
+                });
+            })
+            .catch(next)
+    },
 
     create(req, res, next) {
         new Schedule({
@@ -17,7 +26,8 @@ const scheduleController = {
             exercises: req.body.exercises,
             status: req.body.status,
             notes: req.body.notes,
-            date: req.body.date
+            date: req.body.date,
+            user_id: req.user.id
         })
             .save()
             .then((workout) => {

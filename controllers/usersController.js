@@ -3,6 +3,16 @@ const User = require('../models/User')
 
 const usersController = {
     index(req, res, next) {
+        req.user
+            .findUserSchedule()
+            .then((workouts) => {
+                res.json({
+                    data: {
+                        user: req.user,
+                        workouts
+                    },
+                })
+            })
         res.render('user', {
             user: req.user,
         })
