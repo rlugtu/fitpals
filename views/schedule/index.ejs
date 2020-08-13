@@ -1,10 +1,10 @@
 <%- include('../partials/boilerplate') %>
 
 <div class=scheduleContent>
-    <div class='addWorkout'>
-        <h1>Add a New Workout</h1>
-        <form method='POST' action='/schedule'>
-            <input name='date' type='text' placeholder='Date' />
+    <div class='newWorkoutContent'>
+        <h1>Hello</h1>
+        <form class=addWorkout method='POST' action='/schedule'>
+            <input name='date' type='date' placeholder='Date' />
             <input name='split' type='text' placeholder='Split' />
             <input name='exercises' type='text' placeholder='Exercises'>
             <input name='notes' type='text' placeholder='Notes'>
