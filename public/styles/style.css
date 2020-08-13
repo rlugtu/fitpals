@@ -22,7 +22,7 @@ main {
     justify-content: center;
 }
 
-/* login */
+/* login PAGE*/
 .login {
     display: flex;
     flex-direction: row;
@@ -32,16 +32,55 @@ main {
     margin: 5px;
 }
 
+.loginContainer{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    height: 70vh;
+    
+}
+
+.loginBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+    padding-top: 5%;
+    width: 100%;
+}
+.brandQuote {
+    font-size: 6em;
+    color: rgb(240,240,240);
+    font-family: 'Work Sans', sans-serif;
+}
+.brandStatement {
+    font-size: 3em;
+    color: rgb(240,240,240);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.registerButton {
+    font-size: 1.5em;
+    background-color:rgba(103, 128, 159, 1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
 /*  REGISTER PAGE */
-.loginContainer {
+.registerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(240,240,240);
     border-radius: 20px;
     margin: 0 30%;
-    padding: 30px;
+    padding: 20px;
     margin-top: 10%;
+    width: 30vh;
 }
 .loginField {
     width: 100%;
@@ -50,9 +89,17 @@ input {
     border-radius: 5px;
     border: none;
 }
-.loginField > input {
+.registerField > input {
     border-radius: 5px;
     border: 2px solid  rgba(103, 128, 159, 1);
+    width: 25vh;
+}
+
+.registerField > textarea {
+    border-radius: 5px;
+    border: 2px solid  rgba(103, 128, 159, 1);
+    width: 25vh;
+    margin: 10px 0;
 }
 
 input[type="submit"] {
@@ -62,7 +109,6 @@ input[type="submit"] {
     background-color: rgba(103, 128, 159, 1);
     height: 40px;
     border: none;
-    margin-top: 15px;
 }
 
 input[type="submit"]:hover {
@@ -156,9 +202,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
 }
-#submitButton {
-    margin-top: 10px;
-}
+
 
 .fullSchedule {
     width: 40vh;
@@ -218,7 +262,9 @@ textarea {
     padding-bottom: 10px;
 }
 
-
+.singleNotes {
+    margin-top: 1em;
+}
 
 .button {
 display: inline;
