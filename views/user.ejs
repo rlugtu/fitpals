@@ -2,18 +2,17 @@
 
 <div class="userPage">
     <div class="userContent">
-        <h1>Welcome User</h1>
+        <h1>Welcome <%= user.name %></h1>
         <div class="picCrop">
             <img class="proPic"
                 src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=720&q=80">
         </div>
         <div class="userInfo">
             <ul class="infoList">
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi voluptatem officiis
-                    molestias nihil</li>
-                <li>Birthday</li>
-                <li>Location</li>
-                <li>Hobbies</li>
+                <li>About: <%= user.about %> </li>
+                <li>Birthday: <%= user.birthday %> </li>
+                <li>Location: <%= user.location %></li>
+                <li>Hobbies: <%= user.hobbies %> </li>
             </ul>
         </div>
     </div>

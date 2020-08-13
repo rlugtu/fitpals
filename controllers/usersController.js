@@ -33,6 +33,7 @@ const usersController = {
             username: req.body.username,
             email: req.body.email,
             birthday: req.body.birthday,
+            location: req.body.location,
             about: req.body.about,
             hobbies: req.body.hobbies,
             password_digest: hash,

@@ -2,12 +2,13 @@ const db = require('../db/config')
 const Schedule = require('./Schedule')
 
 class User {
-    constructor({ id, name, username, email, birthday, about, hobbies, password_digest }) {
+    constructor({ id, name, username, email, birthday, location, about, hobbies, password_digest }) {
         this.id = id || null
         this.name = name
         this.username = username
         this.email = email
         this.birthday = birthday
+        this.location = location
         this.about = about
         this.hobbies = hobbies
         this.password_digest = password_digest
@@ -35,8 +36,8 @@ class User {
         return db
             .one(
                 `INSERT INTO users
-            (name, username, email, birthday, about, hobbies, password_digest)
-            VALUES ($/name/, $/username/, $/email/, $/birthday/, $/about/, $/hobbies/, $/password_digest/)
+            (name, username, email, birthday, location, about, hobbies, password_digest)
+            VALUES ($/name/, $/username/, $/email/, $/birthday/, $/location/, $/about/, $/hobbies/, $/password_digest/)
             RETURNING *`,
                 this
             )
