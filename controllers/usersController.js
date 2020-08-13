@@ -13,6 +13,17 @@ const usersController = {
             .catch(next)
     },
 
+    indexSchedule(req, res, next) {
+        req.user
+            .findUserSchedule()
+            .then((workouts) => {
+                res.render('userSchedule', {
+                    workouts,
+                });
+            })
+            .catch(next)
+    },
+
     create(req, res, next) {
         const salt = bcrypt.genSaltSync()
         const hash = bcrypt.hashSync(req.body.password, salt)

@@ -1,20 +1,14 @@
 const Schedule = require('../models/Schedule')
 
+
 const scheduleController = {
     index(req, res, next) {
         Schedule.getAll()
             .then((workouts) => {
                 res.render('schedule/index', {
+                    message: 'ok',
                     workouts,
-                });
-            })
-            .catch(next)
-    },
-    indexUser(req, res, next) {
-        Schedule.getAll()
-            .then((workouts) => {
-                res.render('user', {
-                    workouts,
+                    isAuthenticated: !!req.user,
                 });
             })
             .catch(next)
@@ -31,7 +25,7 @@ const scheduleController = {
         })
             .save()
             .then((workout) => {
-                res.redirect('schedule/');
+                res.redirect('/user/schedule');
             })
             .catch(next)
     },
@@ -55,7 +49,7 @@ const scheduleController = {
                 })
             })
             .then((updatedWorkout) => {
-                res.redirect(`/schedule/${updatedWorkout.id}`)
+                res.redirect(`/user/schedule/${updatedWorkout.id}`)
             })
             .catch(next)
     },
@@ -65,7 +59,7 @@ const scheduleController = {
                 return workout.delete()
             })
             .then(() => {
-                res.redirect('/schedule')
+                res.redirect('/user/schedule')
             })
             .catch(next)
     }
