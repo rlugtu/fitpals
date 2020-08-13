@@ -8,6 +8,7 @@ const usersController = {
             .then((workouts) => {
                 res.render('user', {
                     workouts,
+                    user: req.user
                 });
             })
             .catch(next)
@@ -28,8 +29,12 @@ const usersController = {
         const salt = bcrypt.genSaltSync()
         const hash = bcrypt.hashSync(req.body.password, salt)
         new User({
+            name: req.body.name,
             username: req.body.username,
             email: req.body.email,
+            birthday: req.body.birthday,
+            about: req.body.about,
+            hobbies: req.body.hobbies,
             password_digest: hash,
         })
             .save()
