@@ -1,11 +1,16 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color:rgb(240,240,240);
     background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1694&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color:white; 
 }
 
 main {
@@ -87,6 +92,7 @@ nav {
 .logo {
     font-size: 40px;
     color: rgba(234, 234, 234, 1);
+    font-family: 'Work Sans', sans-serif;
 }
 nav ul {
     display: flex;
@@ -101,7 +107,7 @@ li {
     text-decoration: none;
     list-style-type: none;
 }
-a {
+nav a {
     text-decoration: none;
     color: rgba(234, 234, 234, 1);
 }
@@ -117,10 +123,11 @@ a {
 }
 
 .singleWorkouts {
-    border: 2px solid black;
     border-radius: 10px;
-    margin: 5px;
-    background-color:rgba(234, 234, 234, .6)
+    margin:0 20px;
+    margin-top: 10px;
+    background-color:rgba(234, 234, 234, 1);
+    width: 30vw;
 }
 .addWorkout {
     background-color:rgba(234, 234, 234, .2);
@@ -133,7 +140,7 @@ a {
 }
 .addWorkout h1 {
     font-size: 1.5em;
-    color:  white;
+    color:  rgba(234, 234, 234, 1);
 }
 form {
     display: flex;
@@ -160,28 +167,30 @@ input {
     color:  rgba(234, 234, 234, 1);
 }
 .fullSchedule a {
-    color: black;
+    color: rgba(32,32,32,1);
 }
 .date {
-    padding: 5px;
-    border-bottom: 1px solid black;
-    font-size: 1.5em;
-    background-color:rgba(103, 128, 159, 1);
+    padding: 15px;
+    font-size: 1.3em;
+    background-color:rgba(103, 108, 134, 1);
     border-radius: 10px;
-    
-    
 }
+
 .split {
-    padding: 5px;
-    background-color:rgba(234, 234, 234, .5);
+    padding: 15px;
+    background-color:rgba(234, 234, 234, 1);
     font-size: 1.2em;
 }
+
+.split h3 {
+    color: rgba(32,32,32,1)
+}
 .workoutContent {
-    padding: 5px;
+    padding: 15px;
     font-size: 1em;
 }
 .status {
-    padding: 5px;
+    padding: 15px;
     font-size: 1em;
 }
 
@@ -191,11 +200,12 @@ input {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
     border-radius: 10px;
     margin: 10%;
     margin-top: 50px;
 }
+
+
 
 .button {
 display: inline;
@@ -245,18 +255,16 @@ font-size: 20px;
     flex-direction: column;
     margin-top: 2rem;
     padding: 0 10px;
-    width: 35vh;
-    background-color: rgba(240,240,240, .6);
+    width: 40vh;
+    background-color: rgba(240,240,240, 1);
     border-radius: 10px;
 }
 
-ul {
-    margin: 0;
-}
 
 li {
     font-size: 1.2em;
-    margin: .5em;
+    margin: 20px;
+    color: rgba(32,32,32,1);
 }
 .scheduleSummary {
     display: flex;
@@ -264,7 +272,7 @@ li {
 }
 .scheduleSummary h1 {
    font-size: 30px;
-   color: white;
+   color: rgba(240,240,240, 1);
    
 }
 .upcomingWorkouts, .pastWorkouts {
@@ -272,27 +280,19 @@ li {
     flex-direction: column;
     align-items: center;
 }
-.plannedWorkoutList {
-    display: flex;
-    background-color: rgba(240,240,240, .6);
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
+
+.upcomingWorkouts > h1 {
+    padding-bottom: 20px;
+}
+
+.pastWorkouts > h1 {
+    padding-bottom: 20px;
 }
 
 .pastWorkouts h1{
     font-size: 30px;
-    color: white;
+    color: rgba(240,240,240, 1);
 }
-
-.pastWorkoutsList {
-    background-color: rgba(240,240,240, .6);
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-}
-
-
 
 
 
@@ -304,8 +304,7 @@ footer {
     justify-content: center;
     min-height: 5vh;
     box-sizing: border-box;
-    color: black;
-    background-color:rgba(234, 234, 234, .2);
+    color: rgb(141, 141, 141);
     width: 100%;
     position: absolute;
     bottom: 0;

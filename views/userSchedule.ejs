@@ -17,7 +17,6 @@
         <% workouts.forEach(workout => {  %>
         <div class="singleWorkouts">
             <div class="date">
-                <h3><%= workout.id %> </h3>
                 <h3><a href='/schedule/<%= workout.id%>/'><%= workout.date %></h3>
             </div>
             <div class="split">

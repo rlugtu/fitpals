@@ -46,10 +46,6 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRouter)
 app.use('/user', userRouter)
-// app.get('/user', (req, res) => {
-//     res.render('user')
-// })
-
 app.use('/schedule', scheduleRouter)
 
 app.use('*', (req, res) => {

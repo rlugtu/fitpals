@@ -49,7 +49,7 @@ const scheduleController = {
                 })
             })
             .then((updatedWorkout) => {
-                res.redirect(`/user/schedule/${updatedWorkout.id}`)
+                res.redirect(`/schedule/${req.params.id}/`)
             })
             .catch(next)
     },

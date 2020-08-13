@@ -22,14 +22,12 @@
             <h1>Upcoming Workouts</h1>
             <% workouts.forEach(workout => {  %>
             <%if(workout.status === false) { %>
-
-
             <div class="singleWorkouts">
                 <div class="date">
-                    <h3><a href='/schedule/<%= workout.id%>/edit'><%= workout.date %></h3>
+                    <h3><a href='/schedule/<%= workout.id%>/'><%= workout.date %></a></h3>
                 </div>
                 <div class="split">
-                    <h3><%= workout.split %></h3>
+                    <h3>Split: <%= workout.split %></h3>
                 </div>
                 <div class="status"><% if (workout.status) { %>
                     Completed
@@ -40,18 +38,18 @@
             </div>
             <% }}) %>
         </div>
-
     </div>
 
     <div class="pastWorkouts">
         <h1>Past Workouts</h1>
         <% workouts.forEach(workout => {  %>
+        <%if(workout.status) { %>
         <div class="singleWorkouts">
             <div class="date">
-                <h3><a href='/schedule/<%= workout.id%>/edit'><%= workout.date %></h3>
+                <h3><a href='/schedule/<%= workout.id%>/'><%= workout.date %></a></h3>
             </div>
             <div class="split">
-                <h3><%= workout.split %></h3>
+                <h3>Split: <%= workout.split %></h3>
             </div>
             <div class="status"><% if (workout.status) { %>
                 Completed
@@ -60,7 +58,7 @@
                 <% } %>
             </div>
         </div>
-        <% }) %>
+        <% }}) %>
     </div>
 </div>
 
