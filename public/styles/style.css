@@ -84,33 +84,40 @@ main {
     margin-top: 10%;
     width: 30vh;
 }
+.createAccount {
+    font-size: 2em;
+    font-family: 'Work Sans', sans-serif;
+    color: rgba(32,32,32,.8);
+}
 .loginField {
     width: 100%;
 }
 input {
     border-radius: 5px;
-    border: none;
+    border: 1px solid rgba(103, 108, 134, 1);
 }
 .registerField > input {
     border-radius: 5px;
-    border: 2px solid  rgba(103, 128, 159, 1);
+    border: 1px solid rgba(103, 108, 134, 1);
     width: 25vh;
 }
 
 .registerField > textarea {
-    border-radius: 10px;
-    border: 2px solid  rgba(103, 128, 159, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(103, 108, 134, 1);
     width: 25vh;
     margin: .5em 0;
 }
 
 input[type="submit"] {
     border-radius: 10px;
-    width: 100px;
+    width: 10vh;
     color: white;
     background-color: rgba(103, 128, 159, 1);
     height: 2.3em;
     border: none;
+    margin: 10px 0px;
+    font-size: 1.2em;
 }
 
 input[type="submit"]:hover {
@@ -169,6 +176,7 @@ nav a {
 }
 
 .scheduleHeader{
+    font-family: 'Work Sans', sans-serif;
     font-size: 2em;
     color:  rgba(240, 240, 240, 1);
 }
@@ -195,7 +203,7 @@ form {
 form.button {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
 }
 input {
     margin: 5px 0;
@@ -206,12 +214,17 @@ input[type=date] {
     font-family: 'Poppins', sans-serif;
 }
 textarea {
+    margin: 8px 0;
     height: 6em;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
     resize: none;
 }
 
+.addWorkoutCenter {
+    display: flex;
+    justify-content: center;    
+}
 
 .fullSchedule {
     width: 50vh;
@@ -223,14 +236,14 @@ textarea {
 
 }
 .fullScheduleContent{
-    margin-top: 20px;
+    padding-top: 10px;
+    margin-left: 0px;
     width: 100%;
 }
 
 .singleWorkouts {
     border-radius: 10px;
-    margin:0 20px;
-    margin-top: 10px;
+    margin-top: 20px; 
     background-color:rgba(240, 240, 240, 1);
     width: 100%;
 }
@@ -280,6 +293,7 @@ textarea {
 }
 .options {
     display: flex;
+    justify-content: space-evenly;
 }
 
 /* EDIT FORM */
@@ -302,10 +316,23 @@ font-size: 20px;
     width: 50vh;
 }
 
+.editOptions {
+    display:flex;
+    justify-content: space-evenly;
+}
 .backButton {
-    margin-left: 15px;
-    padding: 0;
-    padding-bottom: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 10vh;
+    color: white;
+    margin: 10px 0;
+    background-color: rgba(103, 128, 159, 1);
+    height: 2.3em;
+    border: none;
+    font-size: 1.2em;
+}
+.backButton:hover {
+    cursor: pointer;
 }
 
 select {
@@ -330,9 +357,11 @@ select {
     padding:0 30px;
 }
 .userContent h1{
+    font-family: 'Work Sans', sans-serif;
     color: rgb(240,240,240);
     font-size: 2.5em;
 }
+
 .picCrop {
     margin-top: 2em;
     width: 30vh;
@@ -352,25 +381,25 @@ select {
     margin-top: 2rem;
     padding: 0 10px;
     width: 40vh;
+    height: auto;
     background-color: rgba(240,240,240, 1);
     border-radius: 10px;
 }
 
 
 li {
+  font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
     margin: 20px;
     color: rgba(32,32,32,1);
 }
-.scheduleSummary {
-    display: flex;
-    height: 70vh;
+
+.userScheduleContent{
+    display:flex;
+    width: 100vh;
 }
-.scheduleSummary h1 {
-   font-size: 30px;
-   color: rgba(240,240,240, 1);
-   
-}
+
+
 .upcomingWorkouts, .pastWorkouts {
     display: flex;
     flex-direction: column;
@@ -381,21 +410,15 @@ li {
     width: 45vh;
     margin: 0 10px;
 }
-.upcomingWorkouts > h1 {
-    padding-bottom: 20px;
+.upcomingWorkouts > h1, .pastWorkouts > h1 {
+font-family: 'Work Sans', sans-serif;
+   font-size: 2em;
+   color: rgba(240,240,240, 1);
 }
 
 .pastWorkouts {
     width: 45vh;
     margin: 0 10px;
-}
-.pastWorkouts > h1 {
-    padding-bottom: 20px;
-}
-
-.pastWorkouts h1{
-    font-size: 30px;
-    color: rgba(240,240,240, 1);
 }
 
 

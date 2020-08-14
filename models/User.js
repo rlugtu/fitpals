@@ -45,7 +45,7 @@ class User {
     }
     findUserSchedule() {
         return db
-            .manyOrNone(`SELECT * FROM workouts WHERE user_id =$1`, this.id)
+            .manyOrNone(`SELECT * FROM workouts WHERE user_id =$1 ORDER BY date ASC`, this.id)
             .then((workouts) => {
                 return workouts.map((workout) => new Schedule(workout))
             })

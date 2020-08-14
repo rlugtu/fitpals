@@ -2,7 +2,7 @@
 
 <div class="userPage">
     <div class="userContent">
-        <h1>Welcome <%= user.name %></h1>
+        <h1 class="welcomeUser">Welcome <%= user.name.split(' ',1) %></h1>
         <div class="picCrop">
             <img class="proPic"
                 src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=720&q=80">
@@ -16,7 +16,7 @@
             </ul>
         </div>
     </div>
-    <div class="scheduleSummary">
+    <div class="userScheduleContent">
         <div class="upcomingWorkouts">
             <h1>Upcoming</h1>
             <% workouts.forEach(workout => {  %>
@@ -38,30 +38,31 @@
             </div>
             <% }}) %>
         </div>
-    </div>
 
-    <div class="pastWorkouts">
-        <h1>Completed</h1>
-        <% workouts.forEach(workout => {  %>
-        <%if(workout.status) { %>
-        <div class="singleWorkouts">
-            <div class="date">
-                <h3><a href='/schedule/<%= workout.id%>/'><%= moment(workout.date).format("MMM Do YYYY");  %></a></h3>
+        <div class="pastWorkouts">
+            <h1>Completed</h1>
+            <% workouts.forEach(workout => {  %>
+            <%if(workout.status) { %>
+            <div class="singleWorkouts">
+                <div class="date">
+                    <h3><a href='/schedule/<%= workout.id%>/'><%= moment(workout.date).format("MMM Do YYYY");  %></a>
+                    </h3>
+                </div>
+                <div class="split">
+                    <h3>Split: <%= workout.split %></h3>
+                </div>
+                <div class="status"><% if (workout.status) { %>
+                    Completed
+                    <% } else { %>
+                    Incomplete
+                    <% } %>
+                </div>
             </div>
-            <div class="split">
-                <h3>Split: <%= workout.split %></h3>
-            </div>
-            <div class="status"><% if (workout.status) { %>
-                Completed
-                <% } else { %>
-                Incomplete
-                <% } %>
-            </div>
+            <% }}) %>
         </div>
-        <% }}) %>
     </div>
-</div>
 
 </div>
+
 
 <%- include('./partials/end') %>
