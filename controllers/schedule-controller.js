@@ -1,4 +1,5 @@
 const Schedule = require('../models/Schedule')
+const moment = require('moment')
 
 
 const scheduleController = {
@@ -32,8 +33,9 @@ const scheduleController = {
     show(req, res, next) {
         Schedule.getById(req.params.id)
             .then((workout) => {
-                res.locals.workout = workout
-                next()
+                res.locals.workout = workout,
+
+                    next()
             })
             .catch(next)
     },

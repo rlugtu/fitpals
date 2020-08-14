@@ -1,27 +1,35 @@
 <%- include('../partials/boilerplate') %>
 
-<div class="singleWorkouts">
-    <div class="editForm">
-        <form method='POST' action='/schedule/<%= workout.id %>?_method=PUT'>
-            <h1>Date</h1>
-            <input name='date' type='text' value='<%= workout.date %>' />
-            <h1>Split</h1>
-            <input name='split' type='text' value='<%= workout.split %>' />
-            <h1>Exercise</h1>
-            <input name='exercises' type='text' value='<%= workout.exercises %>'>
-            <h1>Notes</h1>
-            <input name='notes' type='text' value='<%= workout.notes %>'>
-            <h1>Status</h1>
-            <input name='status' type='text' value='<%= workout.status %>'>
-            <input type='submit' value='Update' />
-        </form>
-    </div>
-    <div class=options>
-        <form class="button" method="GET" action="/schedule/<%=workout.id%>/">
+<div class="editContent">
+    <div class="singleWorkouts">
+        <div class="editForm">
+            <form class="editForm" method='POST' action='/schedule/<%= workout.id %>?_method=PUT'>
+                <h1>Date</h1>
+                <input name='date' type='date' value='<%= moment(workout.date).format('YYYY-MM-DD') %>' required />
+                <h1>Split</h1>
+                <input name='split' type='text' value='<%= workout.split %>' />
+                <h1>Exercise</h1>
+                <input name='exercises' type='text' value='<%= workout.exercises %>'>
+                <h1>Notes</h1>
+                <textarea name='notes' type='text' placeholder='Notes'><%= workout.notes %></textarea>
+                <% if(workout.status) { %>
+                <h1>Complete</h1>
+                <% } else { %>
+                <h1>Complete</h1>
+                <% } %>
+                <select name='status'>
+                    <option value='true'>Mark as Complete</option>
+                    <option value='false'>Mark as Incomplete</option>
+                </select>
+                <input type='submit' value='Update' />
+            </form>
+        </div>
+        <form class="backButton" method="GET" action="/schedule/<%=workout.id%>/">
             <input type="submit" value="Back">
         </form>
     </div>
 </div>
+
 
 
 <%- include('../partials/end') %>

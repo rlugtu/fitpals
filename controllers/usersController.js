@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs')
 const User = require('../models/User')
-
+const moment = require('moment')
 const usersController = {
     index(req, res, next) {
         req.user
@@ -8,6 +8,7 @@ const usersController = {
             .then((workouts) => {
                 res.render('user', {
                     workouts,
+                    moment,
                     user: req.user
                 });
             })
@@ -20,6 +21,19 @@ const usersController = {
             .then((workouts) => {
                 res.render('userSchedule', {
                     workouts,
+                    moment: moment
+                });
+            })
+            .catch(next)
+    },
+
+    indexCompleted(req, res, next) {
+        req.user
+            .findUserSchedule()
+            .then((workouts) => {
+                res.render('userCompleted', {
+                    workouts,
+                    moment: moment
                 });
             })
             .catch(next)

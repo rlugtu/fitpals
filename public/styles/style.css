@@ -8,7 +8,9 @@ body {
     background-attachment: fixed;
     overflow: auto;
 }
-
+.dateText {
+    color: white;
+}
 a {
     text-decoration: none;
     color:white; 
@@ -61,9 +63,9 @@ main {
 }
 
 .registerButton {
-    font-size: 1.5em;
+    font-size: 1.3em;
     background-color:rgba(103, 128, 159, 1);
-    padding: 10px;
+    padding: 15px 20px;
     border-radius: 10px;
 }
 
@@ -96,10 +98,10 @@ input {
 }
 
 .registerField > textarea {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid  rgba(103, 128, 159, 1);
     width: 25vh;
-    margin: 10px 0;
+    margin: .5em 0;
 }
 
 input[type="submit"] {
@@ -107,7 +109,7 @@ input[type="submit"] {
     width: 100px;
     color: white;
     background-color: rgba(103, 128, 159, 1);
-    height: 40px;
+    height: 2.3em;
     border: none;
 }
 
@@ -135,7 +137,7 @@ nav {
 }
 .logo {
     font-size: 40px;
-    color: rgba(234, 234, 234, 1);
+    color: rgba(240, 240, 240, 1);
     font-family: 'Work Sans', sans-serif;
 }
 nav ul {
@@ -153,7 +155,7 @@ li {
 }
 nav a {
     text-decoration: none;
-    color: rgba(234, 234, 234, 1);
+    color: rgba(240, 240, 240, 1);
 }
 
 
@@ -168,7 +170,7 @@ nav a {
 
 .scheduleHeader{
     font-size: 2em;
-    color:  rgba(234, 234, 234, 1);
+    color:  rgba(240, 240, 240, 1);
 }
 
 .newWorkoutContent {
@@ -176,11 +178,12 @@ nav a {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
+    width: 50vh;
 }
 .addWorkout {
-    background-color:rgba(234, 234, 234, 1);
+    background-color:rgba(240, 240, 240, 1);
     border-radius: 10px;
-    width: 40vh;
+    width: 100%;
     margin-top: 30px;
 }
 
@@ -188,6 +191,11 @@ form {
     display: flex;
     flex-direction: column;
     padding: 15px;
+}
+form.button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 input {
     margin: 5px 0;
@@ -201,11 +209,12 @@ textarea {
     height: 6em;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
+    resize: none;
 }
 
 
 .fullSchedule {
-    width: 40vh;
+    width: 50vh;
     display: flex;
     border-radius: 10px;
     flex-direction: column; 
@@ -215,16 +224,19 @@ textarea {
 }
 .fullScheduleContent{
     margin-top: 20px;
+    width: 100%;
 }
-.fullSchedule a {
-    color: rgba(32,32,32,1);
-}
+
 .singleWorkouts {
     border-radius: 10px;
     margin:0 20px;
     margin-top: 10px;
-    background-color:rgba(234, 234, 234, 1);
+    background-color:rgba(240, 240, 240, 1);
+    width: 100%;
 }
+
+
+
 .date {
     padding: 15px;
     font-size: 1.3em;
@@ -234,7 +246,6 @@ textarea {
 
 .split {
     padding: 15px;
-    background-color:rgba(234, 234, 234, 1);
     font-size: 1.2em;
 }
 
@@ -244,10 +255,12 @@ textarea {
 .workoutContent {
     padding: 15px;
     font-size: 1em;
+    
 }
 .status {
     padding: 15px;
     font-size: 1em;
+    color: rgba(32,32,32,1);
 }
 
 /* SINGLE WORKOUT PAGE */
@@ -257,23 +270,47 @@ textarea {
     flex-direction: column;
     border-radius: 10px;
     margin: 10%;
-    margin-top: 50px;
+    margin-top: 6vh;
     background-color: white;
-    padding-bottom: 10px;
+    width:30vw;
 }
 
 .singleNotes {
     margin-top: 1em;
 }
-
-.button {
-display: inline;
+.options {
+    display: flex;
 }
 
 /* EDIT FORM */
 
+.editForm > input {
+    margin: 10px 0;
+}
+.editForm > textarea {
+    margin: 10px 0;
+}
+.editForm {
+    padding-bottom: 0;
+}
 .editForm h1{
 font-size: 20px;
+}
+
+.editContent {
+    margin-top: 6vh;
+    width: 50vh;
+}
+
+.backButton {
+    margin-left: 15px;
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+select {
+    margin-top: 10px;
+    padding: 10px;
 }
 
 
@@ -281,7 +318,7 @@ font-size: 20px;
 .userPage {
     display: flex;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 6vh;
     justify-content: space-evenly
 }
 
@@ -340,10 +377,18 @@ li {
     align-items: center;
 }
 
+.upcomingWorkouts {
+    width: 45vh;
+    margin: 0 10px;
+}
 .upcomingWorkouts > h1 {
     padding-bottom: 20px;
 }
 
+.pastWorkouts {
+    width: 45vh;
+    margin: 0 10px;
+}
 .pastWorkouts > h1 {
     padding-bottom: 20px;
 }
@@ -352,8 +397,6 @@ li {
     font-size: 30px;
     color: rgba(240,240,240, 1);
 }
-
-
 
 
 /*  FOOTER */
