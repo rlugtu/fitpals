@@ -41,6 +41,10 @@ main {
     height: 70vh;
     
 }
+#loginButton {
+    height: 32px;
+    padding: 1px;
+}
 
 .loginBanner {
     display: flex;
@@ -114,8 +118,8 @@ input[type="submit"] {
     border-radius: 10px;
     width: 10vh;
     color: white;
-    background-color:  rgba(103, 108, 134, 1);
-    height: 2.3em;
+    background-color:  rgb(158, 169, 192);
+    height: 2em;
     border: none;
     font-size: 1.2em;
 }
@@ -263,7 +267,6 @@ textarea {
 .singleWorkouts {
     border-radius: 10px;
     margin-top: 20px; 
-    background-color:rgba(240, 240, 240, 1);
     width: 100%;
 }
 
@@ -274,6 +277,8 @@ textarea {
     font-size: 1.1em;
     background-color:rgb(158, 169, 192);
     border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .date h3 a{
     color:rgba(240, 240, 240, 1);
@@ -281,6 +286,9 @@ textarea {
 .split {
     padding: 15px;
     font-size: 1em;
+    background-color:rgba(240, 240, 240, 1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .split h3 {
@@ -289,12 +297,27 @@ textarea {
 .workoutContent {
     padding: 15px;
     font-size: 1em;
+    background-color:rgba(240, 240, 240, 1);
     
 }
 .status {
     padding: 15px;
     font-size: 1em;
     color: rgba(32,32,32,1);
+    background-color:rgba(240, 240, 240, 1);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.status2 {
+    padding: 15px;
+    font-size: 1em;
+    color: rgba(32,32,32,1);
+    background-color:rgba(240, 240, 240, 1);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 0px;
 }
 
 /* SINGLE WORKOUT PAGE */
@@ -305,7 +328,7 @@ textarea {
     border-radius: 10px;
     margin: 10%;
     margin-top: 6vh;
-    background-color: white;
+    background-color:rgba(240, 240, 240, 1);
     width:30vw;
 }
 
@@ -315,6 +338,10 @@ textarea {
 .options {
     display: flex;
     justify-content: space-evenly;
+    background-color:rgba(240, 240, 240, 1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
 /* EDIT FORM */
@@ -338,6 +365,8 @@ font-size: 20px;
 }
 
 .editContent {
+    background-color:rgba(240, 240, 240, 1);
+    border-radius: 10px;
     margin-top: 6vh;
     width: 50vh;
 }
@@ -356,8 +385,8 @@ font-size: 20px;
     width: 10vh;
     color: white;
     margin: 20px 0;
-    background-color: rgba(103, 108, 134, 1);
-    height: 2.3em;
+    background-color: rgb(158, 169, 192);
+    height: 2em;
     border: none;
     font-size: 1.2em;
 }
