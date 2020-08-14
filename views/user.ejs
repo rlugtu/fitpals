@@ -14,7 +14,24 @@
                 <li>Location: <%= user.location %></li>
                 <li>Hobbies: <%= user.hobbies %> </li>
             </ul>
+            <button class="editButton">edit</button>
         </div>
+    </div>
+    <div class="editContainer none">
+        <div class="editBox">
+            <h1>Edit Profile</h1>
+            <form class="editField" method='POST' action='/user/<%=user.id %>?_method=PUT'>
+                <input name='name' type='text' placeholder='name' required />
+                <input name='location' type='text' placeholder='location' required />
+                <textarea name='about' type='about' placeholder='about'></textarea>
+                <textarea name='hobbies' type='hobbies' placeholder='hobbies'></textarea>
+                <div class="editOptions">
+                    <input class="updateButton" type='submit' value='Update' />
+                    <input class="backButton editBack" type=button value='Back' action="/user/">
+                </div>
+            </form>
+        </div>
+
     </div>
     <div class="userScheduleContent">
         <div class="upcomingWorkouts">
@@ -45,12 +62,7 @@
                 <div class="split">
                     <h3>Split: <%= workout.split %></h3>
                 </div>
-                <!-- <div class="status"><% if (workout.status) { %>
-                    Completed
-                    <% } else { %>
-                    Incomplete
-                    <% } %>
-                </div> -->
+
             </div>
             <% }}) %>
         </div>

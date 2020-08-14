@@ -25,7 +25,7 @@ class User {
 
     static getById(id) {
         return db
-            .oneOrNone(`SELECT * FROM users WHERE id = $1`, id)
+            .oneOrNone(`SELECT * FROM users WHERE id=$1`, id)
             .then((user) => {
                 if (user) return new this(user)
                 throw new Error('no user found')
@@ -43,6 +43,22 @@ class User {
             )
             .then((savedUser) => Object.assign(this, savedUser))
     }
+
+    update(changes) {
+        Object.assign(this, changes)
+        return db
+            .one(`UPDATE users SET
+        name = $/name/,
+        location = $/location/,
+        about = $/about/,
+        hobbies = $/hobbies/
+        WHERE id = $/id/
+        RETURNING *`,
+                this
+            )
+            .then((updatedUser) => Object.assign(this, updatedUser))
+    }
+
     findUserSchedule() {
         return db
             .manyOrNone(`SELECT * FROM workouts WHERE user_id =$1 ORDER BY date ASC`, this.id)

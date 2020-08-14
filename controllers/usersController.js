@@ -26,15 +26,19 @@ const usersController = {
             })
             .catch(next)
     },
-
-    indexCompleted(req, res, next) {
-        req.user
-            .findUserSchedule()
-            .then((workouts) => {
-                res.render('userCompleted', {
-                    workouts,
-                    moment: moment
-                });
+    update(req, res, next) {
+        User.getById(req.params.id)
+            .then((foundUser) => {
+                return foundUser.update({
+                    name: req.body.name,
+                    username: req.body.username,
+                    location: req.body.location,
+                    about: req.body.about,
+                    hobbies: req.body.hobbies,
+                })
+            })
+            .then((updatedUser) => {
+                res.redirect(`/user`)
             })
             .catch(next)
     },
