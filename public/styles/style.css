@@ -64,7 +64,7 @@ main {
 
 .registerButton {
     font-size: 1.3em;
-    background-color:rgba(103, 128, 159, 1);
+    background-color: rgba(103, 108, 134, 1);
     padding: 15px 20px;
     border-radius: 10px;
 }
@@ -85,6 +85,7 @@ main {
     width: 30vh;
 }
 .createAccount {
+    margin-top: 15px;
     font-size: 2em;
     font-family: 'Work Sans', sans-serif;
     color: rgba(32,32,32,.8);
@@ -113,10 +114,9 @@ input[type="submit"] {
     border-radius: 10px;
     width: 10vh;
     color: white;
-    background-color: rgba(103, 128, 159, 1);
+    background-color:  rgba(103, 108, 134, 1);
     height: 2.3em;
     border: none;
-    margin: 10px 0px;
     font-size: 1.2em;
 }
 
@@ -153,9 +153,11 @@ nav ul {
     align-items: center;
 }
 nav li {
-    font-size: 24px;
+    font-size: 1.2em;
     margin: 0px 20px;
 }
+
+
 li {
     text-decoration: none;
     list-style-type: none;
@@ -165,6 +167,9 @@ nav a {
     color: rgba(240, 240, 240, 1);
 }
 
+nav a:hover {
+    color: rgba(32,32,32,.8);
+}
 
 
 /* USER SCHEDULE INDEX */
@@ -198,7 +203,7 @@ nav a {
 form {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
 }
 form.button {
     display: flex;
@@ -251,15 +256,17 @@ textarea {
 
 
 .date {
-    padding: 15px;
-    font-size: 1.3em;
-    background-color:rgba(103, 108, 134, 1);
+    padding:10px 15px;
+    font-size: 1.1em;
+    background-color:rgb(158, 169, 192);
     border-radius: 10px;
 }
-
+.date h3 a{
+    color:rgba(240, 240, 240, 1);
+}
 .split {
     padding: 15px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .split h3 {
@@ -302,10 +309,15 @@ textarea {
     margin: 10px 0;
 }
 .editForm > textarea {
+    border: 1px solid rgba(103, 108, 134, 1);
     margin: 10px 0;
+    border-radius: 5px;
 }
 .editForm {
     padding-bottom: 0;
+}
+.editForm > input {
+    border: 1px solid rgba(103, 108, 134, 1);
 }
 .editForm h1{
 font-size: 20px;
@@ -320,13 +332,17 @@ font-size: 20px;
     display:flex;
     justify-content: space-evenly;
 }
+
+.updateButton {
+    margin-top: 20px;
+}
 .backButton {
     padding: 5px;
     border-radius: 10px;
     width: 10vh;
     color: white;
-    margin: 10px 0;
-    background-color: rgba(103, 128, 159, 1);
+    margin: 20px 0;
+    background-color: rgba(103, 108, 134, 1);
     height: 2.3em;
     border: none;
     font-size: 1.2em;
@@ -355,6 +371,7 @@ select {
     flex-direction: column;
     height: 100%;
     padding:0 30px;
+    width: 45vh;
 }
 .userContent h1{
     font-family: 'Work Sans', sans-serif;
@@ -380,7 +397,6 @@ select {
     flex-direction: column;
     margin-top: 2rem;
     padding: 0 10px;
-    width: 40vh;
     height: auto;
     background-color: rgba(240,240,240, 1);
     border-radius: 10px;
@@ -389,7 +405,7 @@ select {
 
 li {
   font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 20px;
     color: rgba(32,32,32,1);
 }

@@ -34,7 +34,6 @@ const scheduleController = {
         Schedule.getById(req.params.id)
             .then((workout) => {
                 res.locals.workout = workout,
-
                     next()
             })
             .catch(next)
