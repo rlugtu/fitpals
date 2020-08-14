@@ -175,9 +175,22 @@ nav a:hover {
 /* USER SCHEDULE INDEX */
 .scheduleContent {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    width:80vw;
+    align-items: center;
     margin-top: 40px;
+}
+.addButtonArea {
+    margin-top:2em;
+}
+.addButton {
+    font-size: 1.5em;
+}
+.bothSchedules {
+    display: flex;
+}
+.scheduleOptions {
+    display: flex;
 }
 
 .scheduleHeader{
@@ -191,8 +204,9 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
-    width: 50vh;
+    width: 30vw;
 }
+
 .addWorkout {
     background-color:rgba(240, 240, 240, 1);
     border-radius: 10px;
@@ -232,12 +246,12 @@ textarea {
 }
 
 .fullSchedule {
-    width: 50vh;
+    width: 30vw;
     display: flex;
     border-radius: 10px;
     flex-direction: column; 
     align-items: center;
-    margin: 0 20px;
+    margin: 20px 20px;
 
 }
 .fullScheduleContent{
@@ -450,3 +464,67 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
+
+
+/* ANIMATIONS */
+.userPage {
+    animation: fade 1s;
+}
+/* .singleWorkouts{
+    animation: fade 1.5s;
+} */
+
+.fadeSlide {
+    animation: fade 1s;
+}
+.singleWorkouts:nth-child(1) {
+    animation: fade 1s;
+}
+
+.singleWorkouts:nth-child(2) {
+    animation: fade 1s;
+}
+
+.singleWorkouts:nth-child(3) {
+    animation: fade 2s;
+}
+
+.singleWorkouts:nth-child(4) {
+    animation: fade 2.5s;
+}
+
+.singleWorkouts:nth-child(5) {
+    animation: fade 3.5s;
+}
+.singleWorkouts:nth-child(6) {
+    animation: fade 4s;
+}
+
+.singleWorkouts:nth-child(7) {
+    animation: fade 4.5s;
+}
+.singleWorkouts:nth-child(9) {
+    animation: fade 5s;
+}
+.singleWorkouts:nth-child(10) {
+    animation: fade 5.5s;
+}
+
+
+
+.none {
+    display:none;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0%;
+        transform: translateY(3vh)
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0vh)
+    }
+}
+

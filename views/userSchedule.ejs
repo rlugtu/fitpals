@@ -1,44 +1,77 @@
 <%- include('./partials/boilerplate') %>
 
 <div class=scheduleContent>
-    <div class="newWorkoutContent">
-        <h1 class="scheduleHeader">Create</h1>
-        <div class='addWorkout'>
-            <form method='POST' action='/schedule'>
-                <input name='date' type='date' placeholder='Date' required />
-                <input name='split' type='text' placeholder='Split' />
-                <input name='exercises' type='text' placeholder='Exercises'>
-                <textarea name='notes' type='text' placeholder='Notes'></textarea>
-                <div class="addWorkoutCenter">
-                    <input type='submit' value='Create' />
-                </div>
-            </form>
-        </div>
+    <div>
+        <ul class="scheduleOptions">
+            <li class="addButton">Add</li>
+        </ul>
     </div>
-
-
-    <div class="fullSchedule">
-        <h1 class="scheduleHeader">Schedule</h1>
-        <div class="fullScheduleContent">
-            <% workouts.forEach(workout => {  %>
-            <%if(workout.status === false) { %>
-            <div class="singleWorkouts">
-                <div class="date">
-                    <h3><a href='/schedule/<%= workout.id%>/'><%= moment(workout.date).format("MMM Do YYYY");  %></h3>
-                </div>
-                <div class="split">
-                    <h3><%= workout.split %></h3>
-                </div>
-                <div class="status"><% if (workout.status) { %>
-                    Completed
-                    <% } else { %>
-                    Incomplete
-                    <% } %>
-                </div>
+    <div class="bothSchedules">
+        <div class="newWorkoutContent none">
+            <h1 class="scheduleHeader">Create</h1>
+            <div class='addWorkout'>
+                <form method='POST' action='/schedule'>
+                    <input name='date' type='date' placeholder='Date' required />
+                    <input name='split' type='text' placeholder='Split' />
+                    <input name='exercises' type='text' placeholder='Exercises'>
+                    <textarea name='notes' type='text' placeholder='Notes'></textarea>
+                    <div class="addWorkoutCenter">
+                        <input type='submit' value='Create' />
+                    </div>
+                </form>
             </div>
-            <% }}) %>
+        </div>
+        <div class="fullSchedule">
+            <h1 class="scheduleHeader">Schedule</h1>
+            <div class="fullScheduleContent">
+                <% workouts.forEach(workout => {  %>
+                <%if(workout.status === false) { %>
+                <div class="singleWorkouts">
+                    <div class="date">
+                        <h3><a href='/schedule/<%= workout.id%>/'><%= moment(workout.date).format("MMM Do YYYY");  %>
+                        </h3>
+                    </div>
+                    <div class="split">
+                        <h3><%= workout.split %></h3>
+                    </div>
+                    <div class="status"><% if (workout.status) { %>
+                        Completed
+                        <% } else { %>
+                        Incomplete
+                        <% } %>
+                    </div>
+                </div>
+                <% }}) %>
+            </div>
+        </div>
+        <div class="fullSchedule complete">
+            <h1 class="scheduleHeader">Completed</h1>
+            <div class="fullScheduleContent">
+                <% workouts.forEach(workout => {  %>
+                <%if(workout.status) { %>
+                <div class="singleWorkouts">
+                    <div class="date">
+                        <h3><a href='/schedule/<%= workout.id%>/'><%= moment(workout.date).format("MMM Do YYYY");  %>
+                        </h3>
+                    </div>
+                    <div class="split">
+                        <h3><%= workout.split %></h3>
+                    </div>
+                    <div class="status"><% if (workout.status) { %>
+                        Completed
+                        <% } else { %>
+                        Incomplete
+                        <% } %>
+                    </div>
+                </div>
+                <% }}) %>
+            </div>
         </div>
     </div>
+
+
+
+
 </div>
 
 <%- include('./partials/end') %>
