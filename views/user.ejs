@@ -21,10 +21,10 @@
         <div class="editBox">
             <h1>Edit Profile</h1>
             <form class="editField" method='POST' action='/user/<%=user.id %>?_method=PUT'>
-                <input name='name' type='text' placeholder='name' required />
-                <input name='location' type='text' placeholder='location' required />
-                <textarea name='about' type='about' placeholder='about'></textarea>
-                <textarea name='hobbies' type='hobbies' placeholder='hobbies'></textarea>
+                <input id="name" name='name' type='text' value='<%= user.name %>' required />
+                <input name='location' type='text' value=' <%= user.location %>' required />
+                <textarea name='about' type='about'><%= user.about %></textarea>
+                <textarea name='hobbies' type='hobbies'><%= user.hobbies %></textarea>
                 <div class="editOptions">
                     <input class="updateButton" type='submit' value='Update' />
                     <input class="backButton editBack" type=button value='Back' action="/user/">

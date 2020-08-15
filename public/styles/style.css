@@ -17,6 +17,13 @@ a {
     color:white; 
 }
 
+input {
+    padding:0 5px;
+}
+
+textarea{
+    padding:0 5px;
+}
 main {
     margin: 0 5%;
     flex-grow: 1;
@@ -24,6 +31,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 
 /* login PAGE*/
 .login {
@@ -450,6 +458,9 @@ select {
     padding: 0 10px;
     background-color: rgba(240,240,240, 1);
     border-radius: 10px;
+}
+#name {
+    padding-left: 10px;
 }
 .editContainer {
     display: flex;
