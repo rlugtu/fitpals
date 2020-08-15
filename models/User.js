@@ -19,7 +19,7 @@ class User {
             .oneOrNone('SELECT * FROM users WHERE username = $1', username)
             .then((user) => {
                 if (user) return new this(user)
-                else throw new Error('User not found')
+                // else throw new Error('User not found')
             })
     }
 

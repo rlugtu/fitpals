@@ -1,5 +1,4 @@
 const Schedule = require('../models/Schedule')
-const moment = require('moment')
 
 
 const scheduleController = {

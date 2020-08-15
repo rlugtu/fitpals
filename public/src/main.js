@@ -1,4 +1,3 @@
-
 const addButton = document.querySelector('.addButton')
 const addWorkoutBox = document.querySelector('.newWorkoutContent')
 const fullSchedule = document.querySelector('.fullSchedule')
@@ -11,9 +10,6 @@ if (addButton) {
         completedSchedule.classList.toggle('none')
     })
 }
-
-
-
 
 const editButton = document.querySelector('.editButton')
 const userInfo = document.querySelector('.userInfo')
@@ -34,3 +30,23 @@ if (editBack) {
     })
 }
 
+//format todays date to YYYY MM DD to set as min value for calendar
+// assistance from https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
+const dateFormat = () => {
+    const today = new Date()
+    month = '' + (today.getMonth() + 1)
+    day = '' + today.getDate()
+    year = '' + today.getFullYear()
+    if (month.length < 2) {
+        month = '0' + month
+    }
+    if (day.length < 2) {
+        day = '0' + day
+    }
+    return [year, month, day].join('-')
+}
+const todaysDate = (dateFormat(new Date()))
+const dateMin = document.querySelector('#inputDate')
+if (dateMin) {
+    dateMin.setAttribute('min', todaysDate)
+}
