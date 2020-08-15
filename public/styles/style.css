@@ -562,7 +562,7 @@ footer {
 
 
 /* ANIMATIONS */
-main, .editBox{
+main, .editBox, .loginContainer{
     animation: fade 1s;
 }
 
