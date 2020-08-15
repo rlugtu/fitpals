@@ -5,7 +5,8 @@
         <div class="editForm">
             <form class="editForm" method='POST' action='/schedule/<%= workout.id %>?_method=PUT'>
                 <h1>Date</h1>
-                <input name='date' type='date' value='<%= moment(workout.date).format('YYYY-MM-DD') %>' required />
+                <input id="inputDate" name='date' type='date' value='<%= moment(workout.date).format('YYYY-MM-DD') %>'
+                    required />
                 <h1>Split</h1>
                 <input name='split' type='text' value='<%= workout.split %>' />
                 <h1>Exercise</h1>

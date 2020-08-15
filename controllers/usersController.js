@@ -26,6 +26,17 @@ const usersController = {
             })
             .catch(next)
     },
+    userCreate(req, res, next) {
+        req.user
+            .findUserSchedule()
+            .then((workouts) => {
+                res.render('userCreate', {
+                    workouts,
+                    moment: moment
+                });
+            })
+            .catch(next)
+    },
     update(req, res, next) {
         User.getById(req.params.id)
             .then((foundUser) => {

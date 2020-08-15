@@ -1,26 +1,7 @@
 <%- include('./partials/boilerplate') %>
 
 <div class=scheduleContent>
-    <div>
-        <ul class="scheduleOptions">
-            <li class="addButton">Add</li>
-        </ul>
-    </div>
     <div class="bothSchedules">
-        <div class="newWorkoutContent none">
-            <h1 class="scheduleHeader">Create</h1>
-            <div class='addWorkout'>
-                <form method='POST' action='/schedule'>
-                    <input id="inputDate" name='date' type='date' min="2020/08/14" placeholder='Date' required />
-                    <input name='split' type='text' placeholder='Split' />
-                    <input name='exercises' type='text' placeholder='Exercises'>
-                    <textarea name='notes' type='text' placeholder='Notes'></textarea>
-                    <div class="addWorkoutCenter">
-                        <input type='submit' value='Create' />
-                    </div>
-                </form>
-            </div>
-        </div>
         <div class="fullSchedule">
             <h1 class="scheduleHeader">Schedule</h1>
             <div class="fullScheduleContent">
@@ -40,7 +21,6 @@
                             <% } %>
                         </div>
                     </div>
-
                 </div>
                 <% }}) %>
             </div>
@@ -69,10 +49,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 </div>
 
 <%- include('./partials/end') %>

@@ -11,7 +11,7 @@ userRouter.get('/new', authHelpers.loginRedirect, (req, res) => {
 })
 
 userRouter.post('/', usersController.create)
-
+userRouter.get('/create', authHelpers.loginRequired, usersController.userCreate)
 userRouter.put('/:id([0-9]+)', usersController.update)
 
 module.exports = userRouter;

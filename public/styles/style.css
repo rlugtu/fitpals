@@ -42,7 +42,7 @@ main {
     
 }
 #loginButton {
-    height: 32px;
+    font-size: 2vh;
     padding: 1px;
 }
 
@@ -56,18 +56,18 @@ main {
     width: 100%;
 }
 .brandQuote {
-    font-size: 6em;
+    font-size: 10vh;
     color: rgb(240,240,240);
     font-family: 'Work Sans', sans-serif;
 }
 .brandStatement {
-    font-size: 3em;
+    font-size: 5vh;
     color: rgb(240,240,240);
     font-family: 'Work Sans', sans-serif;
 }
 
 .registerButton {
-    font-size: 1.3em;
+    font-size: 2vh;
     background-color: rgb(158, 169, 192);
     padding: 15px 20px;
     border-radius: 10px;
@@ -84,12 +84,11 @@ main {
     background-color: rgb(240,240,240);
     border-radius: 20px;
     margin: 0 30%;
-    padding: 20px;
-    margin-top: 10%;
-    width: 30vh;
+    padding: 30px;
+    margin-top: 5%;
+    width: 50vh;
 }
 .createAccount {
-    margin-top: 15px;
     font-size: 2em;
     font-family: 'Work Sans', sans-serif;
     color: rgba(32,32,32.9);
@@ -101,16 +100,18 @@ input {
     border-radius: 5px;
     border: 1px solid rgba(103, 108, 134, 1);
 }
+.registerField {
+    width: 100%;
+    padding-bottom: 0;
+}
 .registerField > input {
     border-radius: 5px;
     border: 1px solid rgba(103, 108, 134, 1);
-    width: 25vh;
 }
 
 .registerField > textarea {
     border-radius: 5px;
     border: 1px solid rgba(103, 108, 134, 1);
-    width: 25vh;
     margin: .5em 0;
 }
 
@@ -207,7 +208,7 @@ nav a:hover {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin: 0 20px;
+    margin: 20px;
     width: 30vw;
 }
 
@@ -407,8 +408,8 @@ select {
 .userPage {
     display: flex;
     width: 100%;
-    margin-top: 6vh;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    padding: 5vh;
 }
 
 .userContent {
@@ -540,23 +541,17 @@ footer {
     box-sizing: border-box;
     color: rgb(141, 141, 141);
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
 
 
 /* ANIMATIONS */
-.userPage {
+main, .editBox{
     animation: fade 1s;
 }
-/* .singleWorkouts{
-    animation: fade 1.5s;
-} */
 
-.fadeSlide {
-    animation: fade 1s;
-}
 .singleWorkouts:nth-child(1) {
     animation: fade 1s;
 }
@@ -589,8 +584,6 @@ footer {
 .singleWorkouts:nth-child(10) {
     animation: fade 5.5s;
 }
-
-
 
 .none {
     display:none;

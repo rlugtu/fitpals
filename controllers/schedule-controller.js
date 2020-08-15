@@ -25,7 +25,7 @@ const scheduleController = {
         })
             .save()
             .then((workout) => {
-                res.redirect('/user/schedule');
+                res.redirect('/user/create');
             })
             .catch(next)
     },
