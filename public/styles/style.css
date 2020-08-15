@@ -8,6 +8,7 @@ body {
     background-attachment: fixed;
     overflow: auto;
 }
+
 .dateText {
     color: white;
 }
@@ -345,6 +346,7 @@ textarea {
     margin-bottom: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    font-size: 1.5vh;
 
 }
 
@@ -419,6 +421,7 @@ select {
     height: 100%;
     padding:0 30px;
     width: 45vh;
+    z-index: 10;
 }
 .userContent h1{
     font-family: 'Work Sans', sans-serif;
@@ -445,7 +448,6 @@ select {
     align-items: center;
     margin-top: 2rem;
     padding: 0 10px;
-    height: auto;
     background-color: rgba(240,240,240, 1);
     border-radius: 10px;
 }
@@ -483,14 +485,14 @@ select {
 
 }
 .editButton {
-    margin: 10px;
+    margin-bottom: 10px;
     height: 2em;
-    width: 4em;
+    width: 5vw;
     background-color:rgb(158, 169, 192);
     color: rgba(240,240,240, 1);
     border-radius: 10px;
     border: none;
-    font-size: 1em;
+    font-size: 1.8vh;
 }
 .editButton:hover{
 cursor: pointer
@@ -543,6 +545,7 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    z-index: 1;
 }
 
 
