@@ -17,6 +17,21 @@ if (editBack) {
     })
 }
 
+// highlight nav bar on current page
+const navItems = document.querySelectorAll('a')
+
+if (navItems) {
+    const url = window.location.pathname
+    console.log(url)
+    navItems.forEach((item) => {
+        console.log(item.getAttribute('href'))
+        if (item.getAttribute('href') === url) {
+            console.log('true')
+            item.classList.add('active')
+        }
+    })
+}
+
 //format todays date to YYYY MM DD to set as min value for calendar
 // assistance from https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
 const dateFormat = () => {

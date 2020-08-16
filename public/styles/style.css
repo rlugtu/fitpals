@@ -181,6 +181,7 @@ nav a {
 
 nav a:hover {
     color: rgba(32,32,32.9);
+    animation: fade .5s;
 }
 
 
@@ -602,6 +603,10 @@ main, .editBox, .loginContainer{
     display:none;
 }
 
+/* NAV SHOW LINE ON ACTIVE PAGE */
+.active {
+    border-top: 2px solid rgba(240, 240, 240, .7);
+}
 @keyframes fade {
     0%{
         opacity: 0%;
