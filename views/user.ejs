@@ -36,7 +36,10 @@
     <div class="userScheduleContent">
         <div class="upcomingWorkouts">
             <h1>Upcoming</h1>
+            <%let count = 0 %>
             <% workouts.forEach(workout => {  %>
+            <% if(count < 6) { %>
+            <%count++ %>
             <%if(workout.status === false) { %>
             <div class="singleWorkouts">
                 <div class="date">
@@ -47,12 +50,14 @@
                     <h3>Split: <%= workout.split %></h3>
                 </div>
             </div>
-            <% }}) %>
+            <% }}}) %>
         </div>
 
         <div class="pastWorkouts">
             <h1>Completed</h1>
+            <% let count2 = 0 %>
             <% workouts.forEach(workout => {  %>
+            <% if(count2 < 6) { %>
             <%if(workout.status) { %>
             <div class="singleWorkouts">
                 <div class="date">
@@ -64,7 +69,7 @@
                 </div>
 
             </div>
-            <% }}) %>
+            <% }}}) %>
         </div>
     </div>
 

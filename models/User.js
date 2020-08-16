@@ -66,6 +66,7 @@ class User {
                 return workouts.map((workout) => new Schedule(workout))
             })
     }
+
 }
 
 module.exports = User
