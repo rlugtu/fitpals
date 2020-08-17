@@ -10,7 +10,8 @@
                 <h1>Split</h1>
                 <input name='split' type='text' value='<%= workout.split %>' />
                 <h1>Exercise</h1>
-                <textarea id="textarea" name='exercises' type='text' placeholder='Exercises'></textarea>
+                <textarea id="textarea" name='exercises' type='text'
+                    placeholder='Exercises'><%= workout.exercises %></textarea>
                 <h1>Notes</h1>
                 <textarea name='notes' type='text' placeholder='Notes'><%= workout.notes %></textarea>
                 <% if(workout.status) { %>
