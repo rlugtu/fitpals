@@ -3,7 +3,7 @@
 [Heroku](https://fitpaltracker.herokuapp.com/)
 
 ##Description
-This Fitpal is a fitness planning app that allows users to plan and schedule workouts 
+Fitpal is a fitness planning app that allows users to plan and schedule workouts 
 
 ## Wireframes
 [wireframes](https://imgur.com/a/3koTcDB)
