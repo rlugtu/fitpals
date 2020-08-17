@@ -1,4 +1,4 @@
-# fitpals 
+# FitPal 
 ## Exercise and Fitness Planning App 
 [Heroku](https://fitpaltracker.herokuapp.com/)
 
