@@ -5,7 +5,6 @@
 ##Description
 This Fitpals is a fitness planning app that allows users to plan and schedule workouts 
 
-## Project Workflow 
 ## Wireframes
 [wireframes](https://imgur.com/a/3koTcDB)
 
