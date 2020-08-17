@@ -2,7 +2,6 @@
 ## Exercise and Fitness Planning App 
 [Heroku](https://fitpaltracker.herokuapp.com/)
 
-##Description
 Fitpal is a fitness planning app that allows users to plan and schedule workouts 
 
 ## Wireframes
