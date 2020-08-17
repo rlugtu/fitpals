@@ -60,11 +60,13 @@ This Fitpal is a fitness planning app that allows users to plan and schedule wor
   - passport
   - passport-local
 
-- Add
+## Future implementations 
   - calendar visual or integration with google calendar api
   - error pages for no user found 
-  - implementing public posting
+  - implementing public posting sort of like a news feed where users can post what their doing. 
+  - allowing users to upload a profile picture 
   
+ 
 ## Start Up and Walkthrough in dev environment 
 - Github
   - Fork and clone this repo 
