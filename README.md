@@ -75,7 +75,7 @@ This Fitpal is a fitness planning app that allows users to plan and schedule wor
   - In terminal cd into this repo and type PSQL 
 
 - PSQL
-  - While in terminal and psql already entered type 'CREATE DB DB_NAME'
+  - While in terminal and psql already entered type 'CREATE DB DB_NAME' DB_NAME = file name in the .env file
   - type '\c DB_NAME' to get inside of the db 
   - type '\i db/migrations/ (4 migrations' to create the data tables 
 - NPM
