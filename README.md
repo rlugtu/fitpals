@@ -63,6 +63,7 @@ This Fitpal is a fitness planning app that allows users to plan and schedule wor
 - Add
   - calendar visual or integration with google calendar api
   - error pages for no user found 
+  - implementing public posting
   
 ## Start Up and Walkthrough in dev environment 
 - Github
