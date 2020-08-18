@@ -70,7 +70,7 @@ Fitpal is a fitness planning app that allows users to plan and schedule workouts
 - Github
   - Fork and clone this repo 
   - Create a new directory that is not already a git repo
-  - In terminal type 'git clone ['this repo link'] where this repo link is the clink from the forked repo
+  - In terminal type 'git clone ['this repo link'] where this repo link is the link from the forked repo
   - In terminal cd into this repo and type PSQL 
 
 - PSQL
